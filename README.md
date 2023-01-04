@@ -1,0 +1,1 @@
+# map-arrayObject-promise
