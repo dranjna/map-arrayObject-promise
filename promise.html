@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <script>
+const prom= 44;
+const prom1= new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+resolve('foo');
+  },1000)
+});
+Promise.all([prom,prom1]).then((values,index)=>{
+  console.log(values,index);
+})
+  </script>
+</body>
+</html>

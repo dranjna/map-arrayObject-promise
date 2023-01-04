@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        const emp = [
+            { firstName: 'Sanjeev', lastName : "kumar", Company: 'Smart data', Salary: 100000 , address : [{pin : 13323, diss : "ropar" }] }, 
+            { firstName: 'Ranjna',  lastName : "sharma", Company: 'Doors4s', Salary: 50000 , address : [{pin : 13323 , diss : "nangal" }]},
+            { firstName: 'Harish',  lastName : "sharma", Company: 'Smart data', Salary: 9000 , address : [{pin : 13323 , diss : "mohali" }] },
+            { firstName: 'Harish',  lastName : "sharma", Company: 'Smart data', Salary: 30000 , address : [{pin : 13323 , diss : "mohali" }] },
+            { firstName: 'Harish',  lastName : "choudhary", Company: 'Smart data', Salary: 45000 , address : [{pin : 13323 , diss : "mohali" }] },
+            { firstName: 'Gurpal',  lastName : "choudhary", Company: 'trainee', Salary: 0, address : [{pin : 13323 ,diss : "chd" }] }
+        ]
+      
+            let new_val = emp.map((value,index)=> fulName(value) );
+            console.log(new_val)
+
+            function fulName(value)
+            {
+                let fName = `${value.firstName +" " +value.lastName}`
+                //Object.assign(value, { fullName : fName } );
+                //value.newKey = data 
+                value.fullName = fName
+                return value
+            }
+// function capLetter(){
+//     let new_val= emp.map((loop_value,index)=>{
+//        // debugger;
+//        loop_value.firstName = upperCase(loop_value.firstName)
+//       // debugger;
+//        return loop_value;
+//     })
+//     console.log("---------->",new_val)
+// }
+// capLetter();
+// function upperCase(val){
+//     console.log(val);
+//    return val.toUpperCase();
+// }
+
+        // { name: 'Sanjeev', Company:  designation : 'manager' , 'Smart data', Salary: 100000 , address : [{pin : 13323, diss : "ropar" }] }, 
+        //     { name: 'Ranjna', Company: 'Doors4s', designation : 'TL' ,  Salary: 50000 , address : [{pin : 13323 , diss : "nangal" }]},
+        //     { name: 'Harish', Company: 'Smart data',designation : 'trainee' , Salary: 9000 , address : [{pin : 13323 , diss : "mohali" }] },
+        //     { name: 'Gurpal', Company: 'smaert', Salary: 0, address : [{pin : 13323 ,diss : "chd" }] }
+        // ]
+
+        //  for(let i=0;i<=emp.length;i++){
+        //     console.log(emp[i].name);
+        //  }
+        // let sum =0;
+
+        // let new_val = emp.map((value,index) => {
+        //    //console.log(value.Salary);
+        //    if(value.Salary==100000){
+        //    Object.assign(value,{"designation": "Manager"})
+        //    //console.log(emp)
+        //    }
+        //    else if(value.Salary>=50000){
+        //     Object.assign(value,{"designation":"TL"})
+        //    }
+        //    else if(value.Salary<=10000){
+        //     Object.assign(value,{"designation":"Trainee"})
+        //    }
+        //    else{
+        //     Object.assign(value,[{"designation":"Regular Employee","Profession":"Software Engineer"}])
+        //    }
+          
+        // });
+
+        // console.log(emp);
+        // let new_val = emp.reduce((pre, cur, index) => {
+        //     console.log("pre---->",pre,"cur--->",cur.Salary)
+            
+        //     return pre + cur.Salary;
+        // },100)
+        // console.log(new_val)
+        //  let filVal = emp.filter((val)=>{
+        //        // console.log(val)
+        //         if(val.Salary < 4 ){
+        //             return val.name;
+        //         }
+        //  });
+        //  console.log(filVal)
+    </script>
+</body>
+
+</html>
